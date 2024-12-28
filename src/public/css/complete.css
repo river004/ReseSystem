@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 2000px;
+}
+
+.title-info {
+    display: flex;
+    padding: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home-link {
+    width: 100%;
+    display: flex;
+    padding: 20PX;
+    justify-content: center;
+}
+
+.home-link a {
+    background-color: #2979ff;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

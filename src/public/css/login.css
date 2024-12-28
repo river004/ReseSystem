@@ -1,0 +1,119 @@
+.navbar-box {
+    display: flex;
+}
+
+.navbar-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #2979ff;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    color: white;
+    font-size: 18px;
+}
+
+.menu-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-title {
+    font-size: 24px;
+    color: #2979ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.title-text {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 100px;
+    margin: 0;
+    width: 100%;
+    max-width: 2000px;
+}
+
+/* ログインフォームのスタイル */
+.login-container {
+    width: 350px;
+    padding:0px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-title {
+    width: 100%;
+    padding: 10px;
+    height: 60px;
+    border-radius: 3px 3px 0 0;
+    color: white;
+    background-color: #2979ff;
+}
+
+.login-title p {
+    margin: 8px;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+/* アイコンと入力フィールドのスタイル */
+.input-container {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    padding: 10px;
+}
+
+.input-container i {
+    font-size: 18px;
+    margin: 10px;
+    color: #757575;
+}
+
+.input-field {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #757575;
+    outline: none;
+}
+
+.button-block {
+    width: 100%;
+    text-align: right;
+}
+
+/* ログインボタンのスタイル */
+.login-button {
+    margin: 10px 25px;
+    width: 100px;
+    padding: 5px;
+    background-color: #2979ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #1565c0;
+}

@@ -1,0 +1,321 @@
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    width: 80vw;
+    max-width: 2000px;
+}
+.navbar-box {
+    display: flex;
+    margin: 5px;
+}
+
+.navbar-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #2979ff;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    color: white;
+    font-size: 18px;
+}
+
+.menu-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-title {
+    font-size: 24px;
+    color: #2979ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.title-text {
+    text-decoration: none;
+}
+
+.search-box {
+    width: 50%;
+    padding-left: 10px;
+    margin: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-bar {
+    margin: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 0;
+}
+
+.search-bar select {
+    padding: 5px;
+    border-right: 1px solid #ccc;
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
+    outline: none;
+    font-size: 14px;
+}
+
+
+.search-bar input[type="text"] {
+    padding: auto;
+    padding-right: auto;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-bar button {
+    padding: 0;
+    background-color: white;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.search-icon {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #ccc;
+    /* 外側の円 */
+    border-radius: 50%;
+    /* 円形にする */
+    box-sizing: border-box;
+    /* ボーダーを含めたサイズに調整 */
+    display: inline-block;
+}
+
+.search-icon::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    /* ハンドルの長さ */
+    height: 3px;
+    /* ハンドルの太さ */
+    background-color: #ccc;
+    /* ハンドルの色 */
+    top: 130%;
+    /* 縦の位置を中央に */
+    left: 180%;
+    /* 円の外側に配置 */
+    transform: translate(-50%, -50%) rotate(45deg);
+    /* 傾けてハンドルっぽくする */
+    transform-origin: top left;
+    /* 回転の基準点を設定 */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+    max-width: 2000px;
+}
+
+.store-card {
+    width: 25%;
+    padding: 5px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 20px rgba(255, 255, 255, 0);
+        /* パディング内側の透明領域を作成 */
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card .card-body {
+    padding: 15px;
+    padding-bottom: 0;
+}
+
+.card h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.card p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.card-under {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+.favorite-button {
+    outline: none;
+}
+
+.card .favorite-icon {
+    position: absolute;
+    top: 10px;
+    border: none;
+    right: 10px;
+    font-size: 20px;
+    color: #ff4d4d;
+}
+
+.store-detail {
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+    background-color: #2979ff;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.store-detail p {
+    color: white;
+    font-size: 16px;
+}
+
+button {
+    /* 背景色を無色に */
+    background: transparent;
+    /* 枠線を消す */
+    border: none;
+    /* クリックした際に枠線をnone消す */
+    outline: none;
+    /* 影を消す */
+    box-shadow: none;
+}
+
+.favorite-button {
+    font-size: 30px;
+}
+
+
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #666;
+}
+
+@media (max-width: 1280px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 80vw;
+    }
+
+    .navbar-box {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        margin: 5px;
+        margin-bottom: 20px;
+    }
+
+    .search-box {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        padding-right: 10px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: 20px;
+        margin: 0;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 1280px;
+    }
+
+    .store-card {
+        width: 33.3%;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 80vw;
+    }
+
+    .navbar-box {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        margin: 5px;
+        margin-bottom: 20px;
+    }
+
+    .search-box {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        padding-right: 10px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
+        margin: 0;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 768px;
+    }
+
+    .store-card {
+        width: 50%;
+        padding: 5px;
+    }
+}

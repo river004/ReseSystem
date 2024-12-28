@@ -1,0 +1,322 @@
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    width: 80vw;
+    max-width: 2000px;
+}
+
+.navbar-box {
+    display: flex;
+    margin: 5px;
+}
+
+.navbar-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #2979ff;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    color: white;
+    font-size: 18px;
+}
+
+.menu-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-title {
+    font-size: 24px;
+    color: #2979ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.title-text {
+    text-decoration: none;
+}
+
+.container  {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 2000px;
+}
+
+.user-text {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    justify-content: flex-start;
+}
+
+.user-text h1 {
+    width: 50%;
+    margin: 0;
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+.user-text h2 {
+    width: 50%;
+    margin: 0;
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+.content-header {
+    display: flex;
+}
+
+.content-title {
+    width: 50%;
+    padding: 20px;
+}
+
+.mypage-flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.reservations-box {
+    width: 50%;
+    padding: 20px;
+    height: 650px;
+    overflow-y: auto;
+}
+
+.reservation-content {
+    background-color: #2979ff;
+    color: white;
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.reservation-unit {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.reservation-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reservation-more {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cancel-box {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.circle-button {
+    background-color: white;
+    border-radius: 15px;
+    padding: 0;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cancel-button {
+    color: white;
+    border-radius: 13px;
+    padding: 0;
+    height: 26px;
+    width: 26px;
+    background-color: #2979ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reservation-qr {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.reservation-more-under {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.edit-button {
+    padding: 2px;
+    margin: 2px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.review-button {
+    padding: 2px;
+    margin: 2px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.favorites-box {
+    width: 50%;
+    max-width: 2000px;
+    height: 650px;
+    overflow-y: auto;
+}
+
+.favorites-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 20px;
+    margin: 0;
+}
+
+.store-card {
+    width: 50%;
+    padding: 5px;
+    margin: 0;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 20px rgba(255, 255, 255, 0);
+    /* パディング内側の透明領域を作成 */
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card .card-body {
+    padding: 15px;
+    padding-bottom: 0;
+}
+
+.card h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.card p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.card-under {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+.favorite-button {
+    outline: none;
+    font-size: 30px;
+}
+
+.card .favorite-icon {
+    position: absolute;
+    top: 10px;
+    border: none;
+    right: 10px;
+    font-size: 20px;
+    color: #ff4d4d;
+}
+
+.store-detail {
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+    background-color: #2979ff;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.store-detail p {
+    color: white;
+    font-size: 16px;
+}
+
+button {
+    /* 背景色を無色に */
+    background: transparent;
+    /* 枠線を消す */
+    border: none;
+    /* クリックした際に枠線をnone消す */
+    outline: none;
+    /* 影を消す */
+    box-shadow: none;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+}
+
+.search-bar select,
+.search-bar input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 1000px) {
+    
+}
+
+@media (max-width: 768px) {
+    .store-card {
+        width: 100%;
+        padding: 5px;
+        margin: 0;
+    }
+}

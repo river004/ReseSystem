@@ -1,0 +1,79 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 2000px;
+}
+
+.owner-box {
+    width: 50%;
+    padding: 20px;
+}
+
+.box-round {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: #2979ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.owner-list {
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.owner-users {
+    background-color: whitesmoke;
+    display: flex;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.owner-name {
+    font-size: 20px;
+    width: 50%;
+}
+
+.owner-email {
+    align-items: center;
+    width: 50%;
+}
+
+.owner-create {
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.form-group {
+    font-size: 17px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.form-group input {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.register-button {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
