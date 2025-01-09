@@ -10,7 +10,7 @@ class FavoriteController extends Controller
     public function add(Store $store)
     {
         $user = auth()->user();
-        
+
         // 既にお気に入りに登録されていない場合のみ追加
         if (!$user->favoriteStores->contains($store->id)) {
             $user->favoriteStores()->attach($store->id);

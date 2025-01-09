@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Laravel\Fortify\Fortify;
+use Laravel\Fortify\Contracts\LoginResponse;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 
@@ -55,6 +56,27 @@ class FortifyServiceProvider extends ServiceProvider
 
         Fortify::verifyEmailView(function () {
             return redirect()->route('thank-you');  // または指定したページにリダイレクト
+        });
+
+        // メール認証後のリダイレクト先を変更
+        $this->app->singleton(\Laravel\Fortify\Contracts\VerifyEmailResponse::class, function () {
+            return new class implements \Laravel\Fortify\Contracts\VerifyEmailResponse {
+                public function toResponse($request)
+                {
+                    // 登録感謝ページにリダイレクト
+                    return Redirect::route('thank-you');
+                }
+            };
+        });
+
+        app()->singleton(LoginResponse::class, function ($app) {
+            return new class implements LoginResponse {
+                public function toResponse($request)
+                {
+                    // ログイン後のリダイレクト先を指定
+                    return redirect()->route('stores.index');
+                }
+            };
         });
     }
 }

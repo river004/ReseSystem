@@ -1,18 +1,25 @@
 @extends('layouts.app')
 
+@section('css')
+<link rel="stylesheet" href="{{ asset('css/create.css') }}">
+@endsection
+
 @section('content')
 <div class="navbar">
-    <div class="navbar-icon">
-        <a class="menu-icon" href="{{ route('menu.index') }}"><i class="fas fa-bars"></i></a>
-    </div>
-    <div class="navbar-title" >
-        <a class="title-text" href="{{ route('stores.index') }}">Rese</a>
+    <div class="navbar-box">
+        <div class="navbar-icon">
+            <a class="menu-icon" href="{{ route('menu.index') }}"><i class="fas fa-bars"></i></a>
+        </div>
+        <div class="navbar-title" >
+            <a class="title-text" href="{{ route('stores.index') }}">Rese</a>
+        </div>
     </div>
 </div>
 <div class="container">
-    <h2>店舗作成</h2>
+    
     <form action="{{ route('shops.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
+        <h2>店舗作成</h2>
         <div>
             <label for="name">店名</label>
             <input type="text" name="name" id="name" required>

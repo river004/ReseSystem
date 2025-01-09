@@ -13,6 +13,8 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\Auth\CustomVerifyEmailController;
+use App\Http\Controllers\Auth\CustomRegisteredUserController;
 use Illuminate\Http\Request;
 
 /*
@@ -33,18 +35,19 @@ Route::get('/detail/{store}', [StoreController::class, 'show'])->name('store.sho
 Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
 
 // 会員登録処理を行うルート
-Route::post('/register', [RegisteredUserController::class, 'store']);
+Route::post('/register', [CustomRegisteredUserController::class, 'store'])
+    ->middleware(['guest'])
+    ->name('register');
 
 // メール確認通知を再送信するルート
 Route::get('/email/verify', function () {
     return view('auth.verify-email');
-})->middleware('auth')->name('verification.notice');
+})->name('verification.notice');
 
 // メール認証リンクを処理するルート
-Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
-    $request->fulfill();
-    return redirect('/thank-you'); // 認証後のリダイレクト先
-})->middleware(['auth', 'signed'])->name('verification.verify');
+Route::get('/email/verify/{id}/{hash}', CustomVerifyEmailController::class)
+    ->middleware(['signed', 'throttle:6,1'])
+    ->name('verification.verify');
 
 Route::get('/thank-you', function () {
     return view('auth.thank-you');
