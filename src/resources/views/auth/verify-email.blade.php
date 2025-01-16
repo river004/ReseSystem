@@ -6,14 +6,23 @@
 
 
 @section('content')
+<div class="navbar">
+    <div class="navbar-box">
+        <div class="navbar-icon">
+            <a class="menu-icon" href="{{ route('menu.index') }}"><i class="fas fa-bars"></i></a>
+        </div>
+        <div class="navbar-title" >
+            <a class="title-text" href="{{ route('stores.index') }}">Rese</a>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="Verify-email-box">
-        <h1>Verify Your Email Address</h1>
-        <p>確認メールがあなたのメールアドレスに送信されました。確認してください。</p>
-        <form method="POST" action="{{ route('verification.send') }}">
-            @csrf
-            <button type="submit">確認メールを再送信</button>
-        </form>
+        <div class="Verify-email-text">
+            <h1>Verify Your Email Address</h1>
+
+            <p>確認メールがあなたのメールアドレスに送信されました。</br>確認してください。</p>
+        </div>
     </div>
 </div>
 @endsection
